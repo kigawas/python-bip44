@@ -37,4 +37,4 @@ def test_btc_wallet():
 
     assert sk == expected_sk
     assert pk == expected_pk
-    assert pk == PublicKey.from_secret(expected_pk).format()
+    assert pk == PublicKey.from_secret(expected_sk).format()

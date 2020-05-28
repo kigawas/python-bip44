@@ -1,8 +1,11 @@
 [tool.poetry]
 name = "bip44"
 version = "0.0.1"
-description = "Mnemonic + python-bip32"
+description = "Simple python bip44 implementation. Mnemonic + bip32."
+repository = "https://github.com/kigawas/python-bip44"
 authors = ["Weiliang Li <to.be.impressive@gmail.com>"]
+maintainers = ["Weiliang Li <to.be.impressive@gmail.com>"]
+readme = "README.md"
 license = "MIT"
 
 [tool.poetry.dependencies]
