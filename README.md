@@ -2,7 +2,10 @@
 
 Simple python bip44 implementation. Mnemonic + bip32.
 
-## Quickstart
+## Install
+`pip install bip44`
+
+## Quick Start
 ```python
 >>> from coincurve import PrivateKey
 >>> from bip44.wallet import Wallet
