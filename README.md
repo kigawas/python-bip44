@@ -1,2 +1,3 @@
 # python-bip44
-Mnemonic + python-bip32
+
+Simple python bip44 implementation = mnemonic + bip32.

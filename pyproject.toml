@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "bip44"
+version = "0.0.1"
+description = "Mnemonic + python-bip32"
+authors = ["Weiliang Li <to.be.impressive@gmail.com>"]
+license = "MIT"
+
+[tool.poetry.dependencies]
+python = "^3.7"
+bip32 = "^0.0.7"
+mnemonic = "^0.19"
+pysha3 = "^1.0.2"
+
+[tool.poetry.dev-dependencies]
+black = "^19.10b0"
+mypy = "^0.770"
+flake8 = "^3.8.2"
+ipython = "^7.14.0"
+pytest = "^5.4.2"
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"
