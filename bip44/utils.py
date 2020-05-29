@@ -1,7 +1,10 @@
 from typing import List
+
 from bip32 import HARDENED_INDEX
 from coincurve import PublicKey
 from sha3 import keccak_256 as _keccak_256
+
+__all__ = ("keccak_256", "get_eth_addr")
 
 
 def keccak_256(b: bytes) -> bytes:

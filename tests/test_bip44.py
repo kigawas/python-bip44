@@ -1,7 +1,7 @@
 from coincurve import PublicKey
 
 from bip44.wallet import Wallet
-from bip44.utils import get_eth_addr, keccak_256
+from bip44.utils import get_eth_addr
 
 MNEMONIC = "purity tunnel grid error scout long fruit false embody caught skin gate"
 
@@ -14,9 +14,13 @@ def test_eth_wallet():
     assert sk == bytes.fromhex(
         "ac54f0dc80f38b824c666572a0730ea340d63b2581c41a563e624a41074770df"
     )
+    # compressed format pk
     assert pk == bytes.fromhex(
-        "02d9ed78008e7b6c4bdc2beea13230fb3ccb8072728c0986894a3d544485e9b727"  # short format
+        "02d9ed78008e7b6c4bdc2beea13230fb3ccb8072728c0986894a3d544485e9b727"
     )
+
+    assert sk == w.derive_secret_key("m/44'/60'/0'/0/0")
+    assert pk == w.derive_public_key("m/44'/60'/0'/0/0")
 
     pk_64bytes = PublicKey(pk).format(False)[1:]
     assert (
