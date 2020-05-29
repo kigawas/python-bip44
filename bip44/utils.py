@@ -1,4 +1,4 @@
-from typing import List, Union
+from typing import List
 
 from bip32 import HARDENED_INDEX
 from coincurve import PublicKey
