@@ -68,7 +68,7 @@ description = "Python implementation of the BIP32 key derivation scheme"
 name = "bip32"
 optional = false
 python-versions = "*"
-version = "0.0.7"
+version = "0.0.8"
 
 [package.dependencies]
 base58 = "2.0.0"
@@ -525,7 +525,7 @@ docs = ["sphinx", "jaraco.packaging (>=3.2)", "rst.linker (>=1.9)"]
 testing = ["jaraco.itertools", "func-timeout"]
 
 [metadata]
-content-hash = "77e077755beaa35b2094c988127060b5037a078d4c2e0bf6caee4a224d642bfc"
+content-hash = "e5bd786c56bf875a396f38e58fcb20cee22644d3f26eb9dc26d7b0c68317f0a8"
 python-versions = "^3.6"
 
 [metadata.files]
@@ -558,9 +558,8 @@ base58 = [
     {file = "base58-2.0.0.tar.gz", hash = "sha256:c83584a8b917dc52dd634307137f2ad2721a9efb4f1de32fc7eaaaf87844177e"},
 ]
 bip32 = [
-    {file = "bip32-0.0.7-py3-none-any.whl", hash = "sha256:adc6ad518105e2b2bf9741b5f82836b2358c9df7f50ccb74e1ab6be0d2644ffa"},
-    {file = "bip32-0.0.7-py3.7.egg", hash = "sha256:08319e1bd1c5a3f8ec996a0c4bf952fa4332a48e65293517415abd99ef2e93cd"},
-    {file = "bip32-0.0.7.tar.gz", hash = "sha256:5166ae9ca67cbff414daa0b643009b5dc895fcdb649f969e4e0bc0f3e1f3eff7"},
+    {file = "bip32-0.0.8-py3-none-any.whl", hash = "sha256:7a5d59e613d1364608ad85a7f9d2ba2e324c67eb7ed67eef07cd183447e6bbc0"},
+    {file = "bip32-0.0.8.tar.gz", hash = "sha256:1ce6780e8cb41ce551a770152cc180d8256104c34f9c08ae38003e36e98f8d2d"},
 ]
 black = [
     {file = "black-19.10b0-py36-none-any.whl", hash = "sha256:1b30e59be925fafc1ee4565e5e08abef6b03fe455102883820fe5ee2e4734e0b"},

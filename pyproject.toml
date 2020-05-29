@@ -11,7 +11,7 @@ keywords = ["bitcoin", "ethereum", "elliptic curves", "cryptocurrency", "blockch
 
 [tool.poetry.dependencies]
 python = "^3.6"
-bip32 = "^0.0.7"
+bip32 = "^0.0.8"
 mnemonic = "^0.19"
 pysha3 = "^1.0.2"
 
