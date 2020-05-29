@@ -22,10 +22,11 @@ def test_eth_wallet():
     assert sk == w.derive_secret_key("m/44'/60'/0'/0/0")
     assert pk == w.derive_public_key("m/44'/60'/0'/0/0")
 
+    expected_addr = "0x7aD23D6eD9a1D98E240988BED0d78e8C81Ec296C".lower()
     pk_64bytes = PublicKey(pk).format(False)[1:]
-    assert (
-        get_eth_addr(pk_64bytes) == "0x7aD23D6eD9a1D98E240988BED0d78e8C81Ec296C".lower()
-    )
+    assert get_eth_addr(pk_64bytes) == expected_addr
+    assert get_eth_addr(pk) == expected_addr
+    assert get_eth_addr(bytes.fromhex(pk_64bytes.hex())) == expected_addr
 
 
 def test_btc_wallet():
