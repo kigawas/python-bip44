@@ -10,7 +10,7 @@ license = "MIT"
 keywords = ["bitcoin", "ethereum", "elliptic curves", "cryptocurrency", "blockchain"]
 
 [tool.poetry.dependencies]
-python = "^3.6"
+python = "^3.6.8"
 bip32 = "^0.0.8"
 mnemonic = "^0.19"
 pysha3 = "^1.0.2"
