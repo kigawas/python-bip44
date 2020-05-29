@@ -1,4 +1,5 @@
-from typing import Tuple, List, Iterable
+from typing import Tuple, Iterable
+
 from bip32 import BIP32, HARDENED_INDEX
 from mnemonic import Mnemonic
 
@@ -10,6 +11,8 @@ COIN_PATHS = {
 }
 
 _Mnemonic = Mnemonic("english")
+
+__all__ = ("Wallet",)
 
 
 class Wallet:
