@@ -30,7 +30,7 @@ jobs:
           python -m pip install --upgrade pip
           pip install poetry
           poetry install
-          poetry run pip install pytest-cov
+          poetry run pip install pytest-cov coverage
 
       - name: Lint with flake8
         run: |
