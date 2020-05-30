@@ -28,6 +28,15 @@ jobs:
           pytest
 
       - name: Publish
+        env:
+          TEST_PYPI_TOKEN: ${{ secrets.TEST_PYPI_TOKEN }}
+          PYPI_TOKEN: ${{ secrets.PYPI_TOKEN }}
         run: |
           poetry build
+
+          poetry config repositories.testpypi https://test.pypi.org/legacy/
+          poetry config pypi-token.testpypi "$TEST_PYPI_TOKEN"
+          poetry config pypi-token.pypi "$PYPI_TOKEN"
+
+          poetry publish --repository testpypi
           poetry publish
