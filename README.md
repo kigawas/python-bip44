@@ -1,14 +1,16 @@
 # python-bip44
 
-Simple python bip44 implementation. Mnemonic + bip32.
+Simple Python bip44 implementation. Mnemonic + bip32.
 
 ## Install
+
 `pip install bip44`
 
 ## Quick Start
+
 ```python
 >>> from coincurve import PrivateKey
->>> from bip44.wallet import Wallet
+>>> from bip44 import Wallet
 >>> from bip44.utils import get_eth_addr
 >>> mnemonic = "purity tunnel grid error scout long fruit false embody caught skin gate"
 >>> w = Wallet(mnemonic)
