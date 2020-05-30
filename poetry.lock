@@ -68,7 +68,7 @@ description = "Python implementation of the BIP32 key derivation scheme"
 name = "bip32"
 optional = false
 python-versions = "*"
-version = "0.0.7"
+version = "0.0.8"
 
 [package.dependencies]
 base58 = "2.0.0"
@@ -361,8 +361,8 @@ category = "dev"
 description = "Library for building powerful interactive command lines in Python"
 name = "prompt-toolkit"
 optional = false
-python-versions = ">=3.6"
-version = "3.0.3"
+python-versions = ">=3.6.1"
+version = "3.0.5"
 
 [package.dependencies]
 wcwidth = "*"
@@ -536,8 +536,8 @@ docs = ["sphinx", "jaraco.packaging (>=3.2)", "rst.linker (>=1.9)"]
 testing = ["jaraco.itertools", "func-timeout"]
 
 [metadata]
-content-hash = "c910b6f15317799e5771f5b00a0012ea1db9d54c8b9c70182857405f14f89a7e"
-python-versions = "^3.6"
+content-hash = "40b109d617feb9f29f14b0332edf1c098ee13cb5e996b2c806a51952e3226431"
+python-versions = "^3.6.8"
 
 [metadata.files]
 appdirs = [
@@ -569,9 +569,8 @@ base58 = [
     {file = "base58-2.0.0.tar.gz", hash = "sha256:c83584a8b917dc52dd634307137f2ad2721a9efb4f1de32fc7eaaaf87844177e"},
 ]
 bip32 = [
-    {file = "bip32-0.0.7-py3-none-any.whl", hash = "sha256:adc6ad518105e2b2bf9741b5f82836b2358c9df7f50ccb74e1ab6be0d2644ffa"},
-    {file = "bip32-0.0.7-py3.7.egg", hash = "sha256:08319e1bd1c5a3f8ec996a0c4bf952fa4332a48e65293517415abd99ef2e93cd"},
-    {file = "bip32-0.0.7.tar.gz", hash = "sha256:5166ae9ca67cbff414daa0b643009b5dc895fcdb649f969e4e0bc0f3e1f3eff7"},
+    {file = "bip32-0.0.8-py3-none-any.whl", hash = "sha256:7a5d59e613d1364608ad85a7f9d2ba2e324c67eb7ed67eef07cd183447e6bbc0"},
+    {file = "bip32-0.0.8.tar.gz", hash = "sha256:1ce6780e8cb41ce551a770152cc180d8256104c34f9c08ae38003e36e98f8d2d"},
 ]
 black = [
     {file = "black-19.10b0-py36-none-any.whl", hash = "sha256:1b30e59be925fafc1ee4565e5e08abef6b03fe455102883820fe5ee2e4734e0b"},
@@ -758,8 +757,8 @@ pluggy = [
     {file = "pluggy-0.13.1.tar.gz", hash = "sha256:15b2acde666561e1298d71b523007ed7364de07029219b604cf808bfa1c765b0"},
 ]
 prompt-toolkit = [
-    {file = "prompt_toolkit-3.0.3-py3-none-any.whl", hash = "sha256:c93e53af97f630f12f5f62a3274e79527936ed466f038953dfa379d4941f651a"},
-    {file = "prompt_toolkit-3.0.3.tar.gz", hash = "sha256:a402e9bf468b63314e37460b68ba68243d55b2f8c4d0192f85a019af3945050e"},
+    {file = "prompt_toolkit-3.0.5-py3-none-any.whl", hash = "sha256:df7e9e63aea609b1da3a65641ceaf5bc7d05e0a04de5bd45d05dbeffbabf9e04"},
+    {file = "prompt_toolkit-3.0.5.tar.gz", hash = "sha256:563d1a4140b63ff9dd587bda9557cffb2fe73650205ab6f4383092fb882e7dc8"},
 ]
 ptyprocess = [
     {file = "ptyprocess-0.6.0-py2.py3-none-any.whl", hash = "sha256:d7cc528d76e76342423ca640335bd3633420dc1366f258cb31d05e865ef5ca1f"},
