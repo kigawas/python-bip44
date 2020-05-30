@@ -20,7 +20,8 @@ jobs:
           python -m pip install --upgrade pip
           pip install poetry
           poetry install
+          poetry run pip install codecov
       - name: Upload coverage
         run: |
           poetry run coverage run -m pytest
-          bash <(curl -s https://codecov.io/bash)
+          codecov
