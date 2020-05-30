@@ -16,6 +16,9 @@ __all__ = ("Wallet",)
 
 class Wallet:
     def __init__(self, mnemonic: str):
+        """
+        :param mnemonic (str): The master mnemonic to derive keys
+        """
         self._mnemonic = mnemonic
         self._seed = _Mnemonic.to_seed(mnemonic)
         self._bip32 = BIP32.from_seed(self._seed)
