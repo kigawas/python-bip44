@@ -9,15 +9,18 @@ COIN_PATHS = {
     "ETH": (44 + HARDENED_INDEX, 60 + HARDENED_INDEX),
 }
 
-_Mnemonic = Mnemonic("english")
 
 __all__ = ("Wallet",)
 
 
 class Wallet:
-    def __init__(self, mnemonic: str):
+    def __init__(self, mnemonic: str, language: str = "english"):
+        """BIP44 HD wallet with a master mnemonic
+        :param mnemonic (str): The master mnemonic to derive keys
+        :param language (str, optional): The mnemonic's language, default: "english"
+        """
         self._mnemonic = mnemonic
-        self._seed = _Mnemonic.to_seed(mnemonic)
+        self._seed = Mnemonic(language).to_seed(mnemonic)
         self._bip32 = BIP32.from_seed(self._seed)
 
     def _derive_secret(self, path: Union[str, Iterable[int]]) -> bytes:

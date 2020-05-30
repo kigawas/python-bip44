@@ -1,6 +1,3 @@
-from typing import List
-
-from bip32 import HARDENED_INDEX
 from coincurve import PublicKey
 from sha3 import keccak_256 as _keccak_256
 
