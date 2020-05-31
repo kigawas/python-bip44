@@ -21,6 +21,7 @@ mypy = "^0.770"
 flake8 = "^3.8.2"
 ipython = "^7.14.0"
 pytest = "^5.4.2"
+pytest-cov = "^2.9.0"
 
 [build-system]
 requires = ["poetry>=0.12"]
