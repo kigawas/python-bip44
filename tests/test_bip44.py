@@ -4,6 +4,7 @@ from bip44.wallet import Wallet
 from bip44.utils import get_eth_addr
 
 MNEMONIC = "purity tunnel grid error scout long fruit false embody caught skin gate"
+MNEMONIC_JA = "なみだ　むろん　しひょう　こうつう　はかい　たいうん　さほう　ことり　げんき　おでかけ　ひこく　ざんしょ"
 
 
 def test_eth_wallet():
@@ -30,14 +31,30 @@ def test_eth_wallet():
 
 
 def test_btc_wallet():
-    w = Wallet(MNEMONIC)
+    w = Wallet(MNEMONIC_JA, language="japanese")
 
     sk, pk = w.derive_account("btc")
     expected_sk = bytes.fromhex(
-        "18a4ff856a9fcb2ccc599f9fa4aadef57117122b644669523a992296e68c216a"
+        "b9a012b6b7a483cd31dee2cf3c6734b7f5c043657f3b7068e3ca806c3b5d7ef1"
     )
     expected_pk = bytes.fromhex(
-        "03bbaf7f964e5f07471c931e04479b1787427d14d47f0679601438cca53cadc65b"
+        "02e5552d6999ce4f43c2b519c3b5d541585a6980dca3f3c5a96ce1b482824dd713"
+    )
+
+    assert sk == expected_sk
+    assert pk == expected_pk
+    assert pk == PublicKey.from_secret(expected_sk).format()
+
+
+def test_passphrase():
+    w = Wallet(MNEMONIC, passphrase="@@@@")
+
+    sk, pk = w.derive_account("btc")
+    expected_sk = bytes.fromhex(
+        "63c7cf13220c7e2d81a7edf88cef431da1f7a323b8cfc9125be4311651aa6b43"
+    )
+    expected_pk = bytes.fromhex(
+        "03fcd9a4f6abc4a0548e57fae133c47de5715372cfc5ea44e2b5f7ab4a3997d344"
     )
 
     assert sk == expected_sk
