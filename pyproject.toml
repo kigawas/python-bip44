@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "bip44"
-version = "0.0.2"
+version = "0.0.3"
 description = "Simple Python bip44 implementation. Mnemonic + bip32."
 repository = "https://github.com/kigawas/python-bip44"
 authors = ["Weiliang Li <to.be.impressive@gmail.com>"]
@@ -10,7 +10,7 @@ license = "MIT"
 keywords = ["bitcoin", "ethereum", "elliptic curves", "cryptocurrency", "blockchain"]
 
 [tool.poetry.dependencies]
-python = "^3.6.8"
+python = "^3.6"
 bip32 = "^0.0.8"
 mnemonic = "^0.19"
 pysha3 = "^1.0.2"
@@ -19,7 +19,7 @@ pysha3 = "^1.0.2"
 black = "^19.10b0"
 mypy = "^0.770"
 flake8 = "^3.8.2"
-ipython = "^7.14.0"
+ipython = { version = "^7.14.0", python = "^3.6.8" }
 pytest = "^5.4.2"
 pytest-cov = "^2.9.0"
 

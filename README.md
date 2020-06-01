@@ -7,7 +7,7 @@
 [![PyPI](https://img.shields.io/pypi/v/bip44.svg)](https://pypi.org/project/bip44/)
 [![License](https://img.shields.io/github/license/kigawas/python-bip44.svg)](https://github.com/kigawas/python-bip44)
 
-Simple Python bip44 implementation. Mnemonic + bip32.
+Simple Python [bip44](https://github.com/bitcoin/bips/blob/master/bip-0044.mediawiki) implementation. [Mnemonic](https://github.com/trezor/python-mnemonic) + [bip32](https://github.com/darosior/python-bip32).
 
 ## Install
 
