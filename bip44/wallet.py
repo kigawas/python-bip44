@@ -14,14 +14,15 @@ __all__ = ("Wallet",)
 
 
 class Wallet:
-    def __init__(self, mnemonic: str, language: str = "english"):
+    def __init__(self, mnemonic: str, language: str = "english", passphrase: str = ""):
         """BIP44 HD wallet with a master mnemonic.
 
         :param mnemonic (str): The master mnemonic to derive keys
         :param language (str, optional): The mnemonic's language, default: "english"
+        :param passphrase (str, optional): The mnemonic's passphrase, default: ""
         """
         self._mnemonic = mnemonic
-        self._seed = Mnemonic(language).to_seed(mnemonic)
+        self._seed = Mnemonic(language).to_seed(mnemonic, passphrase)
         self._bip32 = BIP32.from_seed(self._seed)
 
     def _derive_secret(self, path: Union[str, Iterable[int]]) -> bytes:
