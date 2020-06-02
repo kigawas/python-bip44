@@ -1,3 +1,5 @@
+from typing import Union
+
 from coincurve import PublicKey
 from sha3 import keccak_256 as _keccak_256
 
@@ -11,8 +13,12 @@ def keccak_256(b: bytes) -> bytes:
     return h.digest()
 
 
-def get_eth_addr(pk: bytes) -> str:
+def get_eth_addr(pk: Union[str, bytes]) -> str:
     """Get ETH address from a public key."""
-    if len(pk) != 64:
-        pk = PublicKey(pk).format(False)[1:]
-    return f"0x{keccak_256(pk)[-20:].hex()}"
+
+    pk_bytes = bytes.fromhex(pk) if isinstance(pk, str) else pk
+
+    if len(pk_bytes) != 64:
+        pk_bytes = PublicKey(pk_bytes).format(False)[1:]
+
+    return f"0x{keccak_256(pk_bytes)[-20:].hex()}"
