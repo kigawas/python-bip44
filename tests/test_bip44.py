@@ -7,6 +7,12 @@ MNEMONIC = "purity tunnel grid error scout long fruit false embody caught skin g
 MNEMONIC_JA = "なみだ　むろん　しひょう　こうつう　はかい　たいうん　さほう　ことり　げんき　おでかけ　ひこく　ざんしょ"
 
 
+def test_utils():
+    pk = "02d9ed78008e7b6c4bdc2beea13230fb3ccb8072728c0986894a3d544485e9b727"
+    assert get_eth_addr(pk) == get_eth_addr(bytes.fromhex(pk))
+    assert get_eth_addr(pk) == "0x7aD23D6eD9a1D98E240988BED0d78e8C81Ec296C".lower()
+
+
 def test_eth_wallet():
     w = Wallet(MNEMONIC)
 
