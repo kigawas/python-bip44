@@ -1,7 +1,7 @@
 from coincurve import PublicKey
 
 from bip44.wallet import Wallet
-from bip44.utils import get_eth_addr
+from bip44.utils import get_eth_addr, to_checksum_addr
 
 MNEMONIC = "purity tunnel grid error scout long fruit false embody caught skin gate"
 MNEMONIC_JA = "なみだ　むろん　しひょう　こうつう　はかい　たいうん　さほう　ことり　げんき　おでかけ　ひこく　ざんしょ"
@@ -9,8 +9,13 @@ MNEMONIC_JA = "なみだ　むろん　しひょう　こうつう　はか�
 
 def test_utils():
     pk = "02d9ed78008e7b6c4bdc2beea13230fb3ccb8072728c0986894a3d544485e9b727"
+    addr = "0x7aD23D6eD9a1D98E240988BED0d78e8C81Ec296C"
     assert get_eth_addr(pk) == get_eth_addr(bytes.fromhex(pk))
-    assert get_eth_addr(pk) == "0x7aD23D6eD9a1D98E240988BED0d78e8C81Ec296C".lower()
+    assert get_eth_addr(pk) == addr
+    assert to_checksum_addr(addr.lower()) == addr
+
+    addr = "0x0Fd60495d705F4Fb86e1b36Be396757689FbE8B3"
+    assert to_checksum_addr(addr.lower()) == addr
 
 
 def test_eth_wallet():
@@ -29,7 +34,7 @@ def test_eth_wallet():
     assert sk == w.derive_secret_key("m/44'/60'/0'/0/0")
     assert pk == w.derive_public_key("m/44'/60'/0'/0/0")
 
-    expected_addr = "0x7aD23D6eD9a1D98E240988BED0d78e8C81Ec296C".lower()
+    expected_addr = "0x7aD23D6eD9a1D98E240988BED0d78e8C81Ec296C"
     pk_64bytes = PublicKey(pk).format(False)[1:]
     assert get_eth_addr(pk_64bytes) == expected_addr
     assert get_eth_addr(pk) == expected_addr
