@@ -12,6 +12,19 @@ def keccak_256(b: bytes) -> bytes:
     h.update(b)
     return h.digest()
 
+def to_checksum_addr(eth_addr: str) -> str:
+    address: str = eth_addr.lower().strip('0x')
+    addr_hash = keccak_256(address.encode()).hex()
+
+    res = []
+    for i, c in enumerate(addr_hash):
+        if int(c, 16) >= 8:
+            res.append(eth_addr[i].upper())
+        else:
+            res.append(eth_addr[i])
+
+    return f'0x{''.join(res)}'
+
 
 def get_eth_addr(pk: Union[str, bytes]) -> str:
     """Get ETH address from a public key."""
