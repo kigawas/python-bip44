@@ -26,5 +26,5 @@ Simple Python [bip44](https://github.com/bitcoin/bips/blob/master/bip-0044.media
 >>> sk.public_key.format() == pk
 True
 >>> get_eth_addr(pk)
-'0x7ad23d6ed9a1d98e240988bed0d78e8c81ec296c'
+'0x7aD23D6eD9a1D98E240988BED0d78e8C81Ec296C'
 ```
