@@ -14,8 +14,10 @@ def keccak_256(b: bytes) -> bytes:
 
 
 def to_checksum_addr(eth_addr: str) -> str:
-    """Convert eth address to eth checksum address"""
-    address = eth_addr.lower().strip("0x")
+    """Convert eth address to eth checksum address
+    EIP 55: https://github.com/ethereum/EIPs/blob/master/EIPS/eip-55.md#implementation
+    """
+    address = eth_addr.lower().replace("0x", "")
     addr_hash = keccak_256(address.encode()).hex()
 
     res = []

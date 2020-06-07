@@ -14,6 +14,9 @@ def test_utils():
     assert get_eth_addr(pk) == addr
     assert to_checksum_addr(addr.lower()) == addr
 
+    addr = "0x0Fd60495d705F4Fb86e1b36Be396757689FbE8B3"
+    assert to_checksum_addr(addr.lower()) == addr
+
 
 def test_eth_wallet():
     w = Wallet(MNEMONIC)
