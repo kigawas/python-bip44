@@ -3,7 +3,7 @@ from typing import Union
 from coincurve import PublicKey
 from sha3 import keccak_256 as _keccak_256
 
-__all__ = ("keccak_256", "get_eth_addr")
+__all__ = ("keccak_256", "get_eth_addr", "to_checksum_addr")
 
 
 def keccak_256(b: bytes) -> bytes:
@@ -12,18 +12,20 @@ def keccak_256(b: bytes) -> bytes:
     h.update(b)
     return h.digest()
 
+
 def to_checksum_addr(eth_addr: str) -> str:
-    address: str = eth_addr.lower().strip('0x')
+    """Convert eth address to eth checksum address"""
+    address = eth_addr.lower().strip("0x")
     addr_hash = keccak_256(address.encode()).hex()
 
     res = []
-    for i, c in enumerate(addr_hash):
-        if int(c, 16) >= 8:
-            res.append(eth_addr[i].upper())
+    for a, h in zip(address, addr_hash):
+        if int(h, 16) >= 8:
+            res.append(a.upper())
         else:
-            res.append(eth_addr[i])
+            res.append(a)
 
-    return f'0x{''.join(res)}'
+    return "0x" + "".join(res)
 
 
 def get_eth_addr(pk: Union[str, bytes]) -> str:
@@ -34,4 +36,4 @@ def get_eth_addr(pk: Union[str, bytes]) -> str:
     if len(pk_bytes) != 64:
         pk_bytes = PublicKey(pk_bytes).format(False)[1:]
 
-    return f"0x{keccak_256(pk_bytes)[-20:].hex()}"
+    return to_checksum_addr(f"0x{keccak_256(pk_bytes)[-20:].hex()}")
