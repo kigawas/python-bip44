@@ -3,12 +3,7 @@ from typing import Tuple, Iterable, Union
 from bip32 import BIP32, HARDENED_INDEX
 from mnemonic import Mnemonic
 
-
-COIN_PATHS = {
-    "BTC": (44 + HARDENED_INDEX, HARDENED_INDEX),
-    "ETH": (44 + HARDENED_INDEX, 60 + HARDENED_INDEX),
-}
-
+from bip44.consts import COIN_PATHS, coin_path_by_index
 
 __all__ = ("Wallet",)
 
@@ -54,20 +49,28 @@ class Wallet:
         return self._derive_public(path)
 
     def derive_account(
-        self, coin: str, account: int = 0, change: int = 0, address_index: int = 0
+        self,
+        coin: Union[str, int],
+        account: int = 0,
+        change: int = 0,
+        address_index: int = 0,
     ) -> Tuple[bytes, bytes]:
         """Derive secret and public key of account, following BIP44 standard like `m / purpose' / coin_type' / account' / change / address_index`.
 
         Args:
-            :param coin (str): e.g. BTC or ETH
+            :param coin (Union[str, int]): e.g. BTC or ETH, respectively, 0 or 60 in index
             :param account (int, optional): Account index, each user should have one
             :param change (int, optional): 0 for receiving payments and 1 for receiving changes, see BIP44 for details
-            :param address_index (int, optional): Should be increasing from 0
+            :param address_index (int, optional): Starting from 0
 
         Returns:
             Tuple[bytes, bytes]: Secret key and public key
         """
-        coin_path = COIN_PATHS[coin.upper()]
+        if isinstance(coin, str):
+            coin_path = COIN_PATHS[coin.upper()]
+        else:
+            coin_path = coin_path_by_index(coin)
+
         account_path = (account + HARDENED_INDEX, change, address_index)
         path = coin_path + account_path
         return (self._derive_secret(path), self._derive_public(path))
