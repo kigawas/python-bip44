@@ -56,6 +56,12 @@ def test_btc_wallet():
     assert pk == expected_pk
     assert pk == PublicKey.from_secret(expected_sk).format()
 
+    sk, pk = w.derive_account(1)  # testnet
+    expected_pk = bytes.fromhex(
+        "02c0dc81e9753524f3303881ab026d27b3a614ce4de93dbe7d2b115aba103d19b5"
+    )
+    assert pk == expected_pk
+
 
 def test_passphrase():
     w = Wallet(MNEMONIC, passphrase="@@@@")
