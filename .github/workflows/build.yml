@@ -13,7 +13,7 @@ jobs:
   build:
     strategy:
       matrix:
-        python_version: ["3.6", "3.7", "3.8"]
+        python_version: ["3.6", "3.7", "3.8", "3.9-rc"]
 
     runs-on: ubuntu-latest
 
