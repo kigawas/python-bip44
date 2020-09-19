@@ -8,6 +8,7 @@ __all__ = ("keccak_256", "get_eth_addr", "to_checksum_addr")
 
 def keccak_256(b: bytes) -> bytes:
     """Get keccak 256 hash from a bytes input."""
+
     h = _keccak_256()
     h.update(b)
     return h.digest()
@@ -17,6 +18,7 @@ def to_checksum_addr(eth_addr: str) -> str:
     """Convert eth address to eth checksum address
     EIP 55: https://github.com/ethereum/EIPs/blob/master/EIPS/eip-55.md#implementation
     """
+
     address = eth_addr.lower().replace("0x", "")
     addr_hash = keccak_256(address.encode()).hex()
 

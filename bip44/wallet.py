@@ -10,7 +10,8 @@ __all__ = ("Wallet",)
 
 class Wallet:
     def __init__(self, mnemonic: str, language: str = "english", passphrase: str = ""):
-        """BIP44 HD wallet with a master mnemonic.
+        """
+        BIP44 HD wallet with a master mnemonic.
 
         :param mnemonic (str): The master mnemonic to derive keys
         :param language (str, optional): The mnemonic's language, default: "english"
@@ -27,7 +28,8 @@ class Wallet:
         return self._bip32.get_pubkey_from_path(path)
 
     def derive_secret_key(self, path: str) -> bytes:
-        """Derive secret key from path.
+        """
+        Derive secret key from path.
 
         Args:
             :param path (str): Key path, e.g. m/44'/0'/0'/0/0
@@ -38,7 +40,8 @@ class Wallet:
         return self._derive_secret(path)
 
     def derive_public_key(self, path: str) -> bytes:
-        """Derive public key from path.
+        """
+        Derive public key from path.
 
         Args:
             :param path (str): Key path, e.g. m/44'/0'/0'/0/0
@@ -55,7 +58,8 @@ class Wallet:
         change: int = 0,
         address_index: int = 0,
     ) -> Tuple[bytes, bytes]:
-        """Derive secret and public key of account, following BIP44 standard like `m / purpose' / coin_type' / account' / change / address_index`.
+        """
+        Derive secret and public key of account, following BIP44 standard like `m / purpose' / coin_type' / account' / change / address_index`.
 
         Args:
             :param coin (Union[str, int]): e.g. BTC or ETH, respectively, 0 or 60 in index
