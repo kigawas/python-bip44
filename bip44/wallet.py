@@ -17,7 +17,6 @@ class Wallet:
         :param language (str, optional): The mnemonic's language, default: "english"
         :param passphrase (str, optional): The mnemonic's passphrase, default: ""
         """
-        self._mnemonic = mnemonic
         self._seed = Mnemonic(language).to_seed(mnemonic, passphrase)
         self._bip32 = BIP32.from_seed(self._seed)
 
