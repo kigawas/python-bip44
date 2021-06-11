@@ -14,7 +14,7 @@ repository = "https://github.com/kigawas/python-bip44"
 python = "^3.6"
 
 # 3rd party
-bip32 = ">=0.0.8,<0.1.1"
+bip32 = ">=0.0.8,<1.1.0"
 mnemonic = "^0.19"
 pysha3 = "^1.0.2"
 
