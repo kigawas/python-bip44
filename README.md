@@ -28,3 +28,19 @@ True
 >>> get_eth_addr(pk)
 '0x7aD23D6eD9a1D98E240988BED0d78e8C81Ec296C'
 ```
+
+## Release Notes
+
+### 0.1.1
+
+- Support Python 3.10
+- Bump dependencies
+
+### 0.1.0
+
+- First beta release
+- Bump dependencies
+
+### 0.0.1 ~ 0.0.7
+
+- Alpha releases
