@@ -23,7 +23,7 @@ black = "^20.8b0"
 flake8 = "^4.0.1"
 ipython = {version = "^7.31.1", python = "^3.7"}
 mypy = "^0.931"
-pytest = "^6.2.5"
+pytest = "^7.0.0"
 pytest-cov = "^3.0.0"
 
 [build-system]
