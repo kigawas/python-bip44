@@ -1,9 +1,9 @@
-from typing import Tuple, Iterable, Union
+from typing import Iterable, Tuple, Union
 
 from bip32 import BIP32, HARDENED_INDEX
 from mnemonic import Mnemonic
 
-from bip44.consts import COIN_PATHS, coin_path_by_index
+from .consts import COIN_PATHS, coin_path_by_index
 
 __all__ = ("Wallet",)
 
