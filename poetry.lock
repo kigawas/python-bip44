@@ -71,7 +71,7 @@ tests = ["mypy", "PyHamcrest (>=2.0.2)", "pytest (>=4.6)", "pytest-benchmark", "
 
 [[package]]
 name = "bip32"
-version = "2.1"
+version = "3.0"
 description = "Minimalistic implementation of the BIP32 key derivation scheme"
 category = "main"
 optional = false
@@ -79,7 +79,7 @@ python-versions = "*"
 
 [package.dependencies]
 base58 = ">=2.0,<3.0"
-coincurve = ">=15.0,<16.0"
+coincurve = ">=15.0,<=17"
 
 [[package]]
 name = "black"
@@ -603,7 +603,7 @@ testing = ["pytest (>=6)", "pytest-checkdocs (>=2.4)", "pytest-flake8", "pytest-
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.7"
-content-hash = "75fb72e1af938450554592fb4bd995c086d8355f6050fee25a6bd79920eb9c00"
+content-hash = "010d31deb32cf15d9ca3259c04aaf9d1ede26ba4da79cb0e863730de958f9627"
 
 [metadata.files]
 appnope = [
@@ -635,9 +635,8 @@ base58 = [
     {file = "base58-2.1.1.tar.gz", hash = "sha256:c5d0cb3f5b6e81e8e35da5754388ddcc6d0d14b6c6a132cb93d69ed580a7278c"},
 ]
 bip32 = [
-    {file = "bip32-2.1-py3-none-any.whl", hash = "sha256:28b30a91559538b4c5e5498677cd92b816a839d44217717713bdf5f759c36ca9"},
-    {file = "bip32-2.1-py3.9.egg", hash = "sha256:94aaa6e388e415ba273e1b92cf8c9f3a4f8e3b8c6c0ac093c1bd4eca53028029"},
-    {file = "bip32-2.1.linux-x86_64.tar.gz", hash = "sha256:f29e711a6c30d11ad8c0c19e76b2b11bac787dcf20b54d45a64be07f46ec0c19"},
+    {file = "bip32-3.0-py3-none-any.whl", hash = "sha256:a73a5a0a8ae3196c671772a8e2ad7a7d38e21a160de4116d5abe23ba6844414c"},
+    {file = "bip32-3.0.tar.gz", hash = "sha256:1ad2e590ba7af4a7656c36dea07bfca0d836703e09f88898b7e2b9cd3fd3dd5e"},
 ]
 black = [
     {file = "black-22.1.0-cp310-cp310-macosx_10_9_universal2.whl", hash = "sha256:1297c63b9e1b96a3d0da2d85d11cd9bf8664251fd69ddac068b98dc4f34f73b6"},
