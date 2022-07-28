@@ -1,14 +1,13 @@
 from typing import Union
 
 from coincurve import PublicKey
-from sha3 import keccak_256 as _keccak_256
+from Crypto.Hash import keccak
 
 __all__ = ("get_eth_addr", "to_checksum_addr")
 
 
 def keccak_256(b: bytes) -> bytes:
-    h = _keccak_256()
-    h.update(b)
+    h = keccak.new(data=b, digest_bits=256)
     return h.digest()
 
 

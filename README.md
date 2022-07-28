@@ -31,9 +31,9 @@ True
 
 ## Release Notes
 
-### 0.1.1 ~ 0.1.2
+### 0.1.1 ~ 0.1.3
 
-- Support Python 3.10
+- Support Python 3.10, 3.11
 - Bump dependencies
 - Drop Python 3.6
 
