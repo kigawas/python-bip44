@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "bip44"
-version = "0.1.3"
+version = "0.1.2"
 # doc
 authors = ["Weiliang Li <to.be.impressive@gmail.com>"]
 description = "Simple Python bip44 implementation. Mnemonic + bip32."

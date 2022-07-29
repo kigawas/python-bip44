@@ -1,7 +1,7 @@
 from coincurve import PublicKey
 
-from bip44.wallet import Wallet
 from bip44.utils import get_eth_addr, to_checksum_addr
+from bip44.wallet import Wallet
 
 MNEMONIC = "purity tunnel grid error scout long fruit false embody caught skin gate"
 MNEMONIC_JA = "なみだ　むろん　しひょう　こうつう　はかい　たいうん　さほう　ことり　げんき　おでかけ　ひこく　ざんしょ"
