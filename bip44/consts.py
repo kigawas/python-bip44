@@ -1,6 +1,6 @@
 from typing import Tuple
-from bip32 import HARDENED_INDEX
 
+from bip32 import HARDENED_INDEX
 
 __all__ = ("COIN_PATHS",)
 
