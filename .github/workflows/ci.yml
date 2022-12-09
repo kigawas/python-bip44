@@ -11,18 +11,18 @@ jobs:
     strategy:
       matrix:
         os: [ubuntu-latest, macos-latest, windows-latest]
-        python-version: ["3.7", "3.8", "3.9", "3.10", "3.11.0-rc.1"]
+        python-version: ["3.7", "3.8", "3.9", "3.10", "3.11"]
 
     runs-on: ${{ matrix.os }}
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
 
-      - uses: actions/setup-python@v2
+      - uses: actions/setup-python@v4
         with:
           python-version: ${{ matrix.python-version }}
 
-      - uses: actions/cache@v2
+      - uses: actions/cache@v3
         with:
           path: |
             ~/.cache/pypoetry/virtualenvs
@@ -30,7 +30,7 @@ jobs:
 
       - uses: abatilo/actions-poetry@v2.0.0
         with:
-          poetry-version: 1.2.0
+          poetry-version: 1.2.2
 
       - run: brew install automake
         if: matrix.os == 'macos-latest'
@@ -41,6 +41,7 @@ jobs:
       - name: Lint with flake8
         run: |
           poetry run flake8 bip44 --exit-zero --count --show-source --statistics
+        if: matrix.python-version != '3.7'
 
       - name: Test with pytest
         run: |
@@ -48,4 +49,4 @@ jobs:
           poetry build
 
       - name: Upload to codecov
-        uses: codecov/codecov-action@v2
+        uses: codecov/codecov-action@v3
