@@ -1,6 +1,6 @@
 # python-bip44
 
-[![Codacy Badge](https://app.codacy.com/project/badge/Grade/4e4aa71f4a234dca809d014b0b214220)](https://app.codacy.com/gh/kigawas/python-bip44/)
+[![Codacy Badge](https://app.codacy.com/project/badge/Grade/4e4aa71f4a234dca809d014b0b214220)](https://app.codacy.com/gh/kigawas/python-bip44/dashboard)
 [![CI](https://img.shields.io/github/workflow/status/kigawas/python-bip44/Build)](https://github.com/kigawas/python-bip44/actions)
 [![Codecov](https://img.shields.io/codecov/c/github/kigawas/python-bip44.svg)](https://codecov.io/gh/kigawas/python-bip44)
 [![PyPI - Python Version](https://img.shields.io/pypi/pyversions/bip44.svg)](https://pypi.org/project/bip44/)
