@@ -63,7 +63,7 @@ tests = ["PyHamcrest (>=2.0.2)", "mypy", "pytest (>=4.6)", "pytest-benchmark", "
 
 [[package]]
 name = "bip32"
-version = "3.3"
+version = "3.4"
 description = "Minimalistic implementation of the BIP32 key derivation scheme"
 category = "main"
 optional = false
@@ -71,7 +71,7 @@ python-versions = "*"
 
 [package.dependencies]
 base58 = ">=2.0,<3.0"
-coincurve = ">=15.0,<18"
+coincurve = ">=15.0,<19"
 
 [[package]]
 name = "black"
@@ -623,8 +623,8 @@ base58 = [
     {file = "base58-2.1.1.tar.gz", hash = "sha256:c5d0cb3f5b6e81e8e35da5754388ddcc6d0d14b6c6a132cb93d69ed580a7278c"},
 ]
 bip32 = [
-    {file = "bip32-3.3-py3-none-any.whl", hash = "sha256:c1ed0b2896b090e090cbd3c7de94ed10a9e1f9157e264f09f1a7177cb0b31b6d"},
-    {file = "bip32-3.3.tar.gz", hash = "sha256:664e0700ee53c79bf2573b277f278b7f4a6ca14ee4ce5e8499721c4c752e32c1"},
+    {file = "bip32-3.4-py3-none-any.whl", hash = "sha256:c18099c25cabc087d081142d040eacb6fdf09f2c61fde3247e1f61313d1c0d26"},
+    {file = "bip32-3.4.tar.gz", hash = "sha256:09213225d99ede936c39a4f5a520549d8ecc49ebe3fa15608a17ea4aa9f61a10"},
 ]
 black = [
     {file = "black-22.12.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:9eedd20838bd5d75b80c9f5487dbcb06836a43833a37846cf1d8c1cc01cef59d"},
