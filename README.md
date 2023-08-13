@@ -1,7 +1,7 @@
 # python-bip44
 
 [![Codacy Badge](https://app.codacy.com/project/badge/Grade/4e4aa71f4a234dca809d014b0b214220)](https://app.codacy.com/gh/kigawas/python-bip44/dashboard)
-[![CI](https://img.shields.io/github/workflow/status/kigawas/python-bip44/Build)](https://github.com/kigawas/python-bip44/actions)
+[![CI](https://img.shields.io/github/actions/workflow/status/kigawas/python-bip44/ci.yml)](https://github.com/kigawas/python-bip44/actions)
 [![Codecov](https://img.shields.io/codecov/c/github/kigawas/python-bip44.svg)](https://codecov.io/gh/kigawas/python-bip44)
 [![PyPI - Python Version](https://img.shields.io/pypi/pyversions/bip44.svg)](https://pypi.org/project/bip44/)
 [![PyPI](https://img.shields.io/pypi/v/bip44.svg)](https://pypi.org/project/bip44/)
@@ -31,11 +31,11 @@ True
 
 ## Release Notes
 
-### 0.1.1 ~ 0.1.3
+### 0.1.1 ~ 0.1.4
 
 - Support Python 3.10, 3.11
 - Bump dependencies
-- Drop Python 3.6
+- Drop Python 3.6, 3.7
 
 ### 0.1.0
 
