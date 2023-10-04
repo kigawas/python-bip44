@@ -17,4 +17,8 @@ COIN_PATHS = {
     "DOGE": coin_path_by_index(3),
     "ETH": coin_path_by_index(60),
     "ETC": coin_path_by_index(61),
+    "DOT": coin_path_by_index(354),
+    "SDN": coin_path_by_index(809),
+    "ASTR": coin_path_by_index(810),
+    "ADA": coin_path_by_index(1815),
 }

@@ -1,6 +1,6 @@
 {
-  "python.formatting.provider": "black",
-  "python.linting.flake8Enabled": true,
-  "python.linting.mypyEnabled": true,
-  "python.linting.enabled": true
+  "[python]": {
+    "editor.defaultFormatter": "ms-python.black-formatter"
+  },
+  "cSpell.words": ["coincurve", "keccak"]
 }
