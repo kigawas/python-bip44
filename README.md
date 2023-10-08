@@ -33,7 +33,7 @@ True
 
 ### 0.1.1 ~ 0.1.4
 
-- Support Python 3.10, 3.11
+- Support Python 3.10, 3.11, 3.12
 - Bump dependencies
 - Drop Python 3.6, 3.7
 
