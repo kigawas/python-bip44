@@ -19,7 +19,7 @@ mnemonic = "^0.20"
 pycryptodome = "^3.16.0"
 
 [tool.poetry.dev-dependencies]
-black = "^23.7"
+black = "^23.12"
 flake8 = {version = "^6.0.0", python = "^3.8.1"}
 ipython = {version = "^8.14.0", python = "^3.9"}
 mypy = "^1.5.1"
