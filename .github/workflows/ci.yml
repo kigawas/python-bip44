@@ -11,17 +11,17 @@ jobs:
     strategy:
       matrix:
         os: [ubuntu-latest, macos-latest, windows-latest]
-        python-version: ["3.8", "3.9", "3.10", "3.11", "3.12"]
+        python-version: ["3.9", "3.10", "3.11", "3.12", "3.13"]
 
     runs-on: ${{ matrix.os }}
 
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
 
       - name: Install poetry
-        run: pipx install poetry
+        run: pipx install poetry pre-commit
 
-      - uses: actions/setup-python@v4
+      - uses: actions/setup-python@v5
         with:
           python-version: ${{ matrix.python-version }}
           cache: poetry
@@ -33,14 +33,14 @@ jobs:
       - name: Install dependencies
         run: poetry install
 
-      - name: Lint with flake8
-        run: |
-          poetry run flake8 bip44 --exit-zero --count --show-source --statistics
+      - run: pre-commit run --all-files
 
-      - name: Test with pytest
-        run: |
-          poetry run pytest --cov=bip44 --cov-report xml
-          poetry build
+      - run: poetry run pytest --cov=bip44 --cov-report xml
+
+      - run: poetry build
 
       - name: Upload to codecov
-        uses: codecov/codecov-action@v3
+        uses: codecov/codecov-action@v4
+        if: matrix.os == 'ubuntu-latest' && matrix.python-version == '3.13'
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }}
