@@ -1,6 +1,13 @@
 {
-  "[python]": {
-    "editor.defaultFormatter": "ms-python.black-formatter"
-  },
-  "cSpell.words": ["coincurve", "keccak"]
+  "cSpell.words": [
+    "coincurve",
+    "keccak",
+    "mypy"
+  ],
+  "cSpell.ignorePaths": [
+    ".git/",
+    ".vscode/",
+    "pyproject.toml",
+    "poetry.lock"
+  ]
 }
