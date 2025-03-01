@@ -19,7 +19,7 @@ mnemonic = ">=0.20"
 pycryptodome = ">=3.19.1"
 
 [tool.poetry.group.dev.dependencies]
-ipython = {version = "8.29.0", python = "^3.10"}
+ipython = {version = "8.33.0", python = "^3.10"}
 mypy = "^1.13.0"
 ruff = "^0.8.0"
 
