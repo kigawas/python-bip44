@@ -29,19 +29,6 @@ True
 '0x7aD23D6eD9a1D98E240988BED0d78e8C81Ec296C'
 ```
 
-## Release Notes
+## Changelog
 
-### 0.1.1 ~ 0.1.5
-
-- Support Python 3.10, 3.11, 3.12, 3.13
-- Bump dependencies
-- Drop Python 3.6, 3.7
-
-### 0.1.0
-
-- First beta release
-- Bump dependencies
-
-### 0.0.1 ~ 0.0.7
-
-- Alpha releases
+See [CHANGELOG.md](./CHANGELOG.md)

@@ -1,4 +1,4 @@
-from typing import Iterable, Tuple, Union
+from typing import Iterable, Union
 
 from bip32 import BIP32, HARDENED_INDEX
 from mnemonic import Mnemonic
@@ -56,7 +56,7 @@ class Wallet:
         account: int = 0,
         change: int = 0,
         address_index: int = 0,
-    ) -> Tuple[bytes, bytes]:
+    ) -> tuple[bytes, bytes]:
         """
         Derive secret and public key of account, following BIP44 standard like `m / purpose' / coin_type' / account' / change / address_index`.
 
